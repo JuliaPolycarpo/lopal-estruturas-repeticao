@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉDIA DE IDADE</title>
+</head>
+<body>
+    <script>
+        let totalDePessoas = prompt('Insira o número de pessoas que você deseja calcular a média de idade: ');
+        let somaIdades = 0;
+
+        for (let numero = 1; numero <= totalDePessoas; numero ++ ){
+            let idade = parseInt(prompt ('Insira a idade da pessoa número' + numero + ':'))
+            //console.log(typeof(idade));
+            somaIdades = somaIdades + idade;
+        }
+        let media = somaIdades / totalDePessoas;
+        document.write ('A média de idade é: ' + media );
+
+        if(isNan(media)){
+            document.write ('Ops! Houve um probleminha');
+        }else{
+
+        }document.write ('A média de idade é: ' + media );
+    </script>
+</body>
+</html>

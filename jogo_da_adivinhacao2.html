@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO DA ADIVINHAÇÃO</title>
+</head>
+<body>
+    <script>
+for (let sim = 1; sim <= 1; nao = 2 ) {
+    let resposta = prompt('Bem-vindo(a) ao jogo de adivinhação.' <br> 'Você deseja iniciar o jogo? se sim, digite 2 caso contrário digite 2: ');
+
+    if (resposta == 1) {
+        let numeroPensado = Math.floor(Math.random() * 10 + 1);
+
+        for (let tentativa = 1; tentativa <= 3; tentativa++) {
+            let chute = prompt('Adivinhe um número de 1 a 10');
+
+            if (chute == numeroPensado) {
+                alert('Parabéns, você acertou!');
+                break;
+            } else {
+                alert('Você errou! Você tem mais ' + (3 - tentativa) + ' tentativas.');
+            }
+
+            if (tentativa == 3) {
+                document.write('Eu pensei no número ' + numeroPensado);
+            }
+        }
+    } else if (resposta == 2) {
+        document.write('Ok, jogamos mais tarde!');
+        break; 
+    }
+}
+
+    </script>
+</body>
+</html>
